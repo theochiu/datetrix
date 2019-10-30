@@ -29,7 +29,24 @@ function update_score() {
 		document.getElementById("score").innerHTML = msg;
 	else
 		document.getElementById("score").innerHTML = "Score: ";
+}
 
+function login() {
+	var pw = "noabgsplz";
+	var input = document.getElementById("accesscode").value;
 
+	if (pw != input) {
+		alert("Access denied: contact admin for access");
+	}
+	else {
+		console.log("success");
+		document.getElementById("login").style.display = "none";
+		document.getElementById("footer1").style.display = "none";
 
+		document.getElementById("questions").style.display = "block";
+		document.getElementById("score").style.display = "block";
+
+		document.getElementById("footer2").style.display = "block";
+
+	}
 }

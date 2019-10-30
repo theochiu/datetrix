@@ -29,9 +29,28 @@
 
 		</div>
 
+		<!-- LOGIN -->
+		<div style="padding-left:60px; padding-right:60px; padding-bottom:30px;" id="login" onsubmit="login(); return false;">
+			<form>
+				<div class="form-group" style="max-width: 200px">
+					<label for="password">Access Code</label>
 
-		<div style="padding-left:60px; padding-right:60px;">
+					<input type="password" class="form-control" id="accesscode" 
+						placeholder="Enter access code">
+
+				</div>
+				<button type="submit" class="btn btn-primary" >Submit</button>
+			</form>
+
+		</div>
+
+
+
+		<div style="padding-left:60px; padding-right:60px; display:none;" id="questions">
+
 			<!-- CHECKBOXES -->
+
+			
 			<!-- <div class="form-check">
 				<input class="form-check-input" type="checkbox" value="1" onclick="update_score();" id="question1">
 				<label class="form-check-label" for="question1">
@@ -59,27 +78,46 @@
 					Weight 10
 				</label>
 			</div> -->
+
+
 		</div>
 
 		<!-- SCORE -->
-		<div style="padding-left:45px; padding-right:45px; padding-top:30px">
+		<div style="padding-left:60px; padding-right:60px; padding-top:30px; display:none;" id="score">
 			<p id="score">
 				Score: 
 			</p>
 		</div>
+
+		<footer id="footer2" style="display: none">
+			<div class="container" style="margin:auto;">
+				<p class="footer-copyright text-center py-3 footer-block" style="width:100">
+					Copyright &copy; <a href="https://theochiu.github.io" target="_blank">Theodore Chiu</a> 2019
+				</p>
+			</div>
+		</footer>
 		
 	</div>
 
-
-
-
-<footer>
-	<div>
-    	<p class="footer-copyright text-center py-3 footer-block">
-    		Copyright &copy; <a href="https://theochiu.github.io" target="_blank">Theodore Chiu</a> 2019
-    	</p>
-    </div>
+<footer class="footer" id="footer1">
+	<div class="container" style="margin:auto;">
+		<p class="footer-copyright text-center py-3 footer-block" style="width:100">
+			Copyright &copy; <a href="https://theochiu.github.io" target="_blank">Theodore Chiu</a> 2019
+		</p>
+	</div>
 </footer>
 
 </body>
+
+<style type="text/css">
+	.footer {
+ position: absolute;
+ bottom: 0;
+ width: 80%;
+ left: 10px;
+ right: 10px;
+ margin:auto;
+
+}
+</style>
 </html>

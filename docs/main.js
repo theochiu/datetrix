@@ -36,6 +36,7 @@ function login() {
 	var input = document.getElementById("accesscode").value;
 
 	if (pw != input) {
+		document.getElementById("accesscode").value = "";
 		alert("Access denied: contact admin for access");
 	}
 	else {

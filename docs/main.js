@@ -24,6 +24,12 @@ function update_score() {
 	// console.log("checked=" + checked_weights + "\ntotal=" + total_weights);
 	var msg = "Score: " + checked_weights +"/"+total_weights;
 	msg += " or " + (checked_weights / total_weights * 100).toFixed(2) + "%";
-	document.getElementById("score").innerHTML = msg;
+
+	if (checked_weights != 0)
+		document.getElementById("score").innerHTML = msg;
+	else
+		document.getElementById("score").innerHTML = "Score: ";
+
+
 
 }

@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Datetrix</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<script type="text/javascript" src="./main.js"></script>
+
+</head>
+<body>
+	<div class="container">
+		<div class="row" style="padding:60px;padding-bottom:10px">
+			<h1 class="h1">
+				Datetrix
+			</h1>
+
+			<p class="p">
+				Using scientific and engineering based quantifiable metrics to evaluate dating decisions.
+				Leveraging data and analytics to choose the objectively best outcomes. View 
+				source code <a href="http://github.com/theochiu/datetrix" target="_blank">here.</a>
+			</p>
+		</div>
+
+		<div style="padding-left:45px; padding-right:45px;">
+			<!-- CHECKBOXES -->
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="30"
+	onclick="update_score();" id="question0">
+	<label class="form-check-label" for="question0">
+		asian
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="5"
+	onclick="update_score();" id="question1">
+	<label class="form-check-label" for="question1">
+		blonde
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="5"
+	onclick="update_score();" id="question2">
+	<label class="form-check-label" for="question2">
+		odd number of dimples
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="17"
+	onclick="update_score();" id="question3">
+	<label class="form-check-label" for="question3">
+		long fingers
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="17"
+	onclick="update_score();" id="question4">
+	<label class="form-check-label" for="question4">
+		not short
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="5"
+	onclick="update_score();" id="question5">
+	<label class="form-check-label" for="question5">
+		taller than me
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="30"
+	onclick="update_score();" id="question6">
+	<label class="form-check-label" for="question6">
+		long hair
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="10"
+	onclick="update_score();" id="question7">
+	<label class="form-check-label" for="question7">
+		smart
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="20"
+	onclick="update_score();" id="question8">
+	<label class="form-check-label" for="question8">
+		musical
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="0.5"
+	onclick="update_score();" id="question9">
+	<label class="form-check-label" for="question9">
+		laughs at my jokes
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="1000"
+	onclick="update_score();" id="question10">
+	<label class="form-check-label" for="question10">
+		loves Jesus
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="40"
+	onclick="update_score();" id="question11">
+	<label class="form-check-label" for="question11">
+		nice body
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="15"
+	onclick="update_score();" id="question12">
+	<label class="form-check-label" for="question12">
+		good skin
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="25"
+	onclick="update_score();" id="question13">
+	<label class="form-check-label" for="question13">
+		crazy/adventurous
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="50"
+	onclick="update_score();" id="question14">
+	<label class="form-check-label" for="question14">
+		calvinist
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="20"
+	onclick="update_score();" id="question15">
+	<label class="form-check-label" for="question15">
+		canto
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="50"
+	onclick="update_score();" id="question16">
+	<label class="form-check-label" for="question16">
+		trusts me
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="15"
+	onclick="update_score();" id="question17">
+	<label class="form-check-label" for="question17">
+		fashionable
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="20"
+	onclick="update_score();" id="question18">
+	<label class="form-check-label" for="question18">
+		has class
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="15"
+	onclick="update_score();" id="question19">
+	<label class="form-check-label" for="question19">
+		likes ice cream
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="15"
+	onclick="update_score();" id="question20">
+	<label class="form-check-label" for="question20">
+		fights
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="26"
+	onclick="update_score();" id="question21">
+	<label class="form-check-label" for="question21">
+		NOT an engineer
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="20"
+	onclick="update_score();" id="question22">
+	<label class="form-check-label" for="question22">
+		likes cars
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="23"
+	onclick="update_score();" id="question23">
+	<label class="form-check-label" for="question23">
+		crazy personality
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="30"
+	onclick="update_score();" id="question24">
+	<label class="form-check-label" for="question24">
+		get's excited with me
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="30"
+	onclick="update_score();" id="question25">
+	<label class="form-check-label" for="question25">
+		encourages me to be crazy
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="30"
+	onclick="update_score();" id="question26">
+	<label class="form-check-label" for="question26">
+		doesn't care what people say
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="40"
+	onclick="update_score();" id="question27">
+	<label class="form-check-label" for="question27">
+		superior genetics
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="35"
+	onclick="update_score();" id="question28">
+	<label class="form-check-label" for="question28">
+		reasonably high rice purity score
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="30"
+	onclick="update_score();" id="question29">
+	<label class="form-check-label" for="question29">
+		I forget my problems when I'm with her
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="10"
+	onclick="update_score();" id="question30">
+	<label class="form-check-label" for="question30">
+		coffee enthusiast
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="15"
+	onclick="update_score();" id="question31">
+	<label class="form-check-label" for="question31">
+		enjoys baths
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="15"
+	onclick="update_score();" id="question32">
+	<label class="form-check-label" for="question32">
+		steals my clothes
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="15"
+	onclick="update_score();" id="question33">
+	<label class="form-check-label" for="question33">
+		bright eyes
+	</label>
+</div>
+
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="30"
+	onclick="update_score();" id="question34">
+	<label class="form-check-label" for="question34">
+		works out
+	</label>
+</div>
+
+			<!-- <div class="form-check">
+				<input class="form-check-input" type="checkbox" value="1" onclick="update_score();" id="question1">
+				<label class="form-check-label" for="question1">
+					Weight 1
+				</label>
+			</div>
+				
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="2" onclick="update_score();" id="question2">
+				<label class="form-check-label" for="question2">
+					Weight 2 
+				</label>
+			</div>
+
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="2" onclick="update_score();" id="question3">
+				<label class="form-check-label" for="question3">
+					Weight 2 
+				</label>
+			</div>
+
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="10" onclick="update_score();" id="question4">
+				<label class="form-check-label" for="question4">
+					Weight 10
+				</label>
+			</div> -->
+		</div>
+
+		<!-- SCORE -->
+		<div style="padding-left:45px; padding-right:45px; padding-top:30px">
+			<p id="score">
+				Score: 
+			</p>
+		</div>
+		
+	</div>
+
+
+
+
+<footer>
+	<div>
+    	<p class="footer-copyright text-center py-3 footer-block">
+    		Copyright &copy; <a href="https://theochiu.github.io" target="_blank">Theodore Chiu</a> 2019
+    	</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -111,13 +111,31 @@
 
 <style type="text/css">
 	.footer {
- position: absolute;
- bottom: 0;
- width: 80%;
- left: 10px;
- right: 10px;
- margin:auto;
+		position: absolute;
+		bottom: 0;
+		width: 80%;
+		left: 10px;
+		right: 10px;
+		margin:auto;
+	}
 
-}
+	/* Light mode */
+	@media (prefers-color-scheme: light) {
+		body {
+			background-color: #FFF;
+			color: black;
+		}
+	}
+
+	/* Dark mode */
+	@media (prefers-color-scheme: dark) {
+		body {
+			/*background-color: hsl(100, 2%, 9%);*/
+			background-color: #121212;
+			color: white;
+			opacity: .87;
+		}
+	}
+
 </style>
 </html>

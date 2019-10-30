@@ -1,5 +1,6 @@
 import pandas as pd
 from pprint import pprint
+import sys
 
 def read_spreadsheet(path):
 	df = pd.read_excel(path)
@@ -40,16 +41,53 @@ def qual_to_dict(matrix):
 		rank = rank[:end]
 
 	mat_dict = {}
-	for i in range(len(desc) -1, 0, -1):
+	for i in range(len(desc)):
 		mat_dict.update({desc[i] : rank[i]})
 
 	return mat_dict
 
-def output_html(mat_dict, template, out_path):
+def output_html(mat_dict, template_name, out_path):
+	with open(template_name, "r") as f:
+		template = f.read()
 
+	ind = template.find("<!-- CHECKBOXES -->") + 20		# the string has len=20
+	top_half = template[:ind]
+	bottom_half = template[ind:]
+
+	insert = ""
+
+	for i, question in enumerate(mat_dict):
+		insert += '<div class="form-check">\n'
+		insert += '\t<input class="form-check-input" type="checkbox" value="{}"\n'.format(mat_dict[question])
+		insert += '\tonclick="update_score();" id="question{}">\n'.format(i)
+		insert += '\t<label class="form-check-label" for="question{}">\n'.format(i)
+		insert += '\t\t{}\n'.format(question)
+		insert += '\t</label>\n'
+		insert += '</div>\n\n'
+
+	with open(out_path, "w+") as f:
+		f.write(top_half)
+		f.write(insert)
+		f.write(bottom_half)
+
+		
 
 def main():
-	pass
+	if len(sys.argv) < 2:
+		print("Need argument for input file")
+		quit()
+
+	matrix = read_spreadsheet(sys.argv[1])
+	mat_dict = qual_to_dict(matrix)
+
+	if len(sys.argv) < 3:
+		print("No output path given, using default")
+		print("Writing index.html to docs/index.html")
+		out_path = "docs/index.html"
+	else:
+		out_path = sys.argv[2]
+
+	output_html(mat_dict, "docs/template.html", out_path)
 
 if __name__ == '__main__':
 	matrix = read_spreadsheet("koalifications.xlsx")

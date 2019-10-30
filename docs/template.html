@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Datetrix</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<script type="text/javascript" src="./main.js"></script>
+
+</head>
+<body>
+	<div class="container">
+		<div class="row" style="padding:60px;padding-bottom:10px">
+			<h1 class="h1">
+				Datetrix
+			</h1>
+
+			<p class="p">
+				Using scientific and engineering based quantifiable metrics to evaluate dating decisions.
+				Leveraging data and analytics to choose the objectively best outcomes. View 
+				source code <a href="http://github.com/theochiu/datetrix" target="_blank">here.</a>
+			</p>
+		</div>
+
+		<!-- CHECKBOXES -->
+		<div style="padding-left:45px; padding-right:45px;">
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="1" onclick="update_score();" id="question1">
+				<label class="form-check-label" for="question1">
+					Weight 1
+				</label>
+			</div>
+				
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="2" onclick="update_score();" id="question2">
+				<label class="form-check-label" for="question2">
+					Weight 2 
+				</label>
+			</div>
+
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="2" onclick="update_score();" id="question3">
+				<label class="form-check-label" for="question3">
+					Weight 2 
+				</label>
+			</div>
+
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="10" onclick="update_score();" id="question4">
+				<label class="form-check-label" for="question4">
+					Weight 10
+				</label>
+			</div>
+		</div>
+
+		<!-- SCORE -->
+		<div style="padding-left:45px; padding-right:45px; padding-top:30px">
+			<p id="score">
+				Score: 
+			</p>
+		</div>
+		
+	</div>
+
+
+
+
+<footer>
+	<div>
+    	<p class="footer-copyright text-center py-3 footer-block">
+    		Copyright &copy; <a href="https://theochiu.github.io" target="_blank">Theodore Chiu</a> 2019
+    	</p>
+    </div>
+</footer>
+
+</body>
+</html>

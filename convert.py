@@ -45,7 +45,8 @@ def qual_to_dict(matrix):
 
 	return mat_dict
 
-def output_html(mat_dict, template, path):
+def output_html(mat_dict, template, out_path):
+
 
 def main():
 	pass
@@ -53,5 +54,4 @@ def main():
 if __name__ == '__main__':
 	matrix = read_spreadsheet("koalifications.xlsx")
 	mat_dict = qual_to_dict(matrix)
-
-
+	output_html(mat_dict, "docs/template.html", "docs/index.html")

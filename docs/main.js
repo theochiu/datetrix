@@ -11,13 +11,20 @@ function update_score() {
 	var total_weights = 0;
 	var checked_weights = 0;
 
+	var redflag = true;
+
 
 	for (var i = 0; i < checked.length; i++) {
-		// boxes_checked.push(checked[i].value);
+		if (Number(checked[i].value) == -1) {
+			redflag = false;
+			continue
+		}
 		checked_weights += Number(checked[i].value);
 	}
 
 	for (var i=0; i<all_boxes.length; i++) {
+		if (Number(all_boxes[i].value) == -1)
+			continue
 		total_weights += Number(all_boxes[i].value);
 	}
 
@@ -25,7 +32,9 @@ function update_score() {
 	var msg = "Score: " + checked_weights +"/"+total_weights;
 	msg += " or " + (checked_weights / total_weights * 100).toFixed(2) + "%";
 
-	if (checked_weights != 0)
+	if (redflag)
+		document.getElementById("score").innerHTML = "RED FLAG ALERT"
+	else if (checked_weights != 0)
 		document.getElementById("score").innerHTML = msg;
 	else
 		document.getElementById("score").innerHTML = "Score: ";

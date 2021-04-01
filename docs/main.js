@@ -10,6 +10,8 @@ function update_score() {
 
 	var total_weights = 0;
 	var checked_weights = 0;
+	var num_checked = 0;
+	var num_q = 0;
 
 	var redflag = true;
 
@@ -20,24 +22,34 @@ function update_score() {
 			continue
 		}
 		checked_weights += Number(checked[i].value);
+		num_checked++;
 	}
 
 	for (var i=0; i<all_boxes.length; i++) {
 		if (Number(all_boxes[i].value) == -1)
 			continue
 		total_weights += Number(all_boxes[i].value);
+		num_q++;
 	}
 
 	// console.log("checked=" + checked_weights + "\ntotal=" + total_weights);
-	var msg = "Score: " + checked_weights +"/"+total_weights;
-	msg += " or " + (checked_weights / total_weights * 100).toFixed(2) + "%";
+	var msg = "Weighted score: " + checked_weights +"/"+total_weights;
+	// +20 for inperfection differential
+	msg += " or " + (checked_weights / total_weights * 100 + 20).toFixed(2) + "%";
 
-	if (redflag)
+	if (redflag) {
 		document.getElementById("score").innerHTML = "RED FLAG ALERT"
-	else if (checked_weights != 0)
+		document.getElementById("raw").innerHTML = "";
+	}
+	else if (checked_weights != 0) {
 		document.getElementById("score").innerHTML = msg;
-	else
-		document.getElementById("score").innerHTML = "Score: ";
+		document.getElementById("raw").innerHTML = "Raw score: " + num_checked +
+			"/" + num_q + " or " + (num_checked/num_q *100).toFixed(2) + "%";
+	}
+	else {
+		document.getElementById("score").innerHTML = "Weighted score: ";
+		document.getElementById("raw").innerHTML = "Raw score: ";
+	}
 }
 
 function login() {
@@ -55,6 +67,7 @@ function login() {
 
 		document.getElementById("questions").style.display = "block";
 		document.getElementById("score").style.display = "block";
+		document.getElementById("raw").style.display = "block";
 
 		document.getElementById("footer2").style.display = "block";
 

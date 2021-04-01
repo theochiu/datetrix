@@ -33,7 +33,7 @@ function update_score() {
 	}
 
 	// console.log("checked=" + checked_weights + "\ntotal=" + total_weights);
-	var msg = "Weighted score: " + checked_weights +"/"+total_weights;
+	var msg = "Weighted score: " + (checked_weights + 0.2 * total_weights).toFixed(2) +"/"+total_weights;
 	// +20 for inperfection differential
 	msg += " or " + (checked_weights / total_weights * 100 + 20).toFixed(2) + "%";
 
